@@ -81,6 +81,8 @@ Dejar solo las variables indicadas en una base
 
            keep var1 var3
             
+Buscar en la base variables string 
 
+           ds, has(type string) 
 
 
