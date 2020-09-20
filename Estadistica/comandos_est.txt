@@ -1,0 +1,71 @@
+Análisis de la varianza
+
+    oneway  var1 var2
+
+Output: 
+
+                        Analysis of Variance
+    Source              SS         df      MS            F     Prob > F
+------------------------------------------------------------------------
+Between groups               0      0            .
+ Within groups       930010855    135    6888969.3
+------------------------------------------------------------------------
+    Total            930010855    135    6888969.3
+
+
+
+
+Resumen de var 2  ordenado var1
+
+    bysort var1 :summarize var2
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-> var1 = opción1
+
+    Variable |       Obs        Mean    Std. Dev.       Min        Max
+-------------+--------------------------------------------------------
+     var2 |          x    .xxx   .xxx          x         x
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-> var1 = opción2
+
+    Variable |       Obs        Mean    Std. Dev.       Min        Max
+-------------+--------------------------------------------------------
+     var2 |           x   .xxx  .xxx         x          x
+
+
+
+
+Categorización de var1 por var3, con la condición de que var2 sea distinto de vacío
+
+    tabstat var1 if var2!=., statistics( mean sd ) by(var3) columns(statistics)
+ 
+Output: 
+
+Summary for variables: var1
+     by categories of: var3 (opciones)
+
+       var1 |      mean        sd
+-----------------+--------------------
+       opción1 |  xxxx        xxxx
+-----------------+--------------------
+       opción2 |  xxxx        xxxx
+-----------------+--------------------
+         Total |  xxxx        xxxx
+--------------------------------------
+
+
+
+
+Reasignar los valores de las opciones de la variable var1
+
+    recode var1 1=0 2=1 
+
+
+
+
+Regresión logistica de dos variables
+
+    logistic var1 var2
+
+    
