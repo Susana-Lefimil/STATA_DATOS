@@ -1,8 +1,5 @@
 //////////////////////////////////////ANTROPOMETRIA////////////////////////////////////
-**Descarga REPORTE ANTRO MEDICIONES(SL)
 
-
-*talla DHA*
 gen DIF1=abs(talla_embarazada-talla_embarazada2)
 gen DIF2=abs(talla_embarazada2-talla_embarazada3)
 gen DIF3=abs(talla_embarazada-talla_embarazada3)
@@ -22,7 +19,7 @@ replace  antro_promtalla=talla_embarazada3 if antro_talla_calc==6 & [talla_embar
 drop DIF1 DIF2 DIF3
 
 label values antro_talla_calc .
-*IMC DHA*
+*IMC *
 replace  antro_imc= peso_embarazada /[antro_promtalla * antro_promtalla]
 
 keep folio redcap_event_name antro_talla_calc antro_promtalla antro_imc
