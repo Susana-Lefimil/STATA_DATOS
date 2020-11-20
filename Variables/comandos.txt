@@ -84,5 +84,9 @@ Dejar solo las variables indicadas en una base
 Buscar en la base variables string 
 
            ds, has(type string) 
+           
+Quitar todos los label de una base.
+
+           label drop _all
 
 
