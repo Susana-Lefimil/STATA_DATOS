@@ -25,6 +25,10 @@ Formato mínimo de digitos
 Lista de duplicados
 
   duplicates list folio rut
+  
+Marcar duplicados
+  
+  duplicates tag folio, gen(dup)
 
 Borrar duplicados
 
