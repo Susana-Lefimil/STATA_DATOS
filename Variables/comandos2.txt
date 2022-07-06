@@ -1,0 +1,47 @@
+Crear un id por folio o identificador, esto permite enumerar la cantidad de obs que hay por folio
+
+  by folio: gen id= _n
+
+Generar observaciones (por ejemplo 100 observaciones)
+
+  set obs 100
+
+Dar formato a una fecha
+
+  format %tdDD/NN/CCYY est_date6
+
+Tabular 
+
+  tab cont_comunad
+
+Separar una variable (ejemplo, por /)
+
+  split testdate, p("/")
+
+Formato mínimo de digitos
+
+  format %16.0g rut
+
+Lista de duplicados
+
+  duplicates list folio rut
+  
+Marcar duplicados
+  
+  duplicates tag folio, gen(dup)
+
+Borrar duplicados
+
+  duplicates drop list folio rut
+
+Borrar label
+
+  label drop _all
+
+Categorizar (generando una variable llamada a)
+
+  encode parto_morb, generate(a)
+
+Cruzar base por variable "var1" con otra base llamada "base2"
+
+  merge 1:1 var1 using "base2.dta"
