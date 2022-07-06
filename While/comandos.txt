@@ -1,0 +1,7 @@
+ *Crear 11 variables nuevas
+ 
+ local i = 1
+ while `i' <=11 {
+      gen var`i'=.
+      local i = `i' + 1
+ }
