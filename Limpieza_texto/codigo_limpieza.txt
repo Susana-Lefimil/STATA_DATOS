@@ -84,4 +84,6 @@ Código para limpiar texto
             replace `v' = subinstr(`v', "", "", .)
             
             }
-
+foreach v of varlist variable1 - variable30{
+      replace `v' =upper(`v')
+	 }
